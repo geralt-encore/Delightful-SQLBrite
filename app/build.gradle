@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.squareup.sqldelight'
+apply plugin: 'me.tatarka.retrolambda'
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "geralt_encore.delightfulsqlbrite"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Android dependencies.
+    compile rootProject.ext.appCompat
+    compile rootProject.ext.supportV4
+    compile rootProject.ext.supportAnnotations
+
+    // SQLBrite
+    compile rootProject.ext.sqlBrite
+
+    // Dagger dependencies.
+    compile rootProject.ext.dagger
+    apt rootProject.ext.daggerCompiler
+
+    // Third-party dependencies.
+    compile rootProject.ext.butterKnifeRuntime
+    apt rootProject.ext.butterKnifeCompiler
+    compile rootProject.ext.timber
+    compile rootProject.ext.rxJava
+    compile rootProject.ext.rxAndroid
+    compile rootProject.ext.rxBinding
+
+    provided rootProject.ext.autoValue
+    apt rootProject.ext.autoValue
+    apt rootProject.ext.autoValueParcel
+}

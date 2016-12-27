@@ -1,0 +1,24 @@
+CREATE TABLE todo_list(
+    _id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    archived INTEGER AS Boolean DEFAULT 0
+);
+
+insert_todo_list:
+INSERT INTO todo_list (name)
+VALUES (?);
+
+insert_archived_todo_list:
+INSERT INTO todo_list (name, archived)
+VALUES (?, ?);
+
+select_name_by_id:
+SELECT name
+FROM todo_list
+WHERE _id = ?;
+
+select_lists_with_item_counts:
+SELECT todo_list._id, todo_list.name, COUNT(todo_item._id) as item_count
+FROM todo_list LEFT OUTER JOIN todo_item ON todo_list._id = todo_item.list_id
+GROUP BY todo_list._id;
+

@@ -1,0 +1,32 @@
+CREATE TABLE todo_item(
+    _id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    list_id INTEGER NOT NULL,
+    description TEXT NOT NULL,
+    complete INTEGER AS Boolean DEFAULT 0,
+    FOREIGN KEY (list_id) REFERENCES todo_list(_id)
+);
+
+insert_todo_item:
+INSERT INTO todo_item (list_id, description)
+VALUES (?, ?);
+
+insert_completed_todo_item:
+INSERT INTO todo_item (list_id, description, complete)
+VALUES (?, ?, ?);
+
+update_complete:
+UPDATE todo_item
+SET complete = ?
+WHERE _id = ?;
+
+select_all_items_for_list:
+SELECT *
+FROM todo_item
+WHERE list_id = ?
+ORDER BY complete ASC;
+
+count_active_items_for_list:
+SELECT COUNT(*)
+FROM todo_item
+WHERE complete = 0 AND list_id = ?;
+
