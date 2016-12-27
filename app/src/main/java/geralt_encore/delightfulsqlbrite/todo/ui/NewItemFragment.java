@@ -19,7 +19,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
@@ -27,7 +26,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.sqldelight.hockey.data.TodoItemModel;
 import com.jakewharton.rxbinding.widget.RxTextView;
 import com.squareup.sqlbrite.BriteDatabase;
 
@@ -35,10 +33,9 @@ import javax.inject.Inject;
 
 import geralt_encore.delightfulsqlbrite.R;
 import geralt_encore.delightfulsqlbrite.todo.TodoApp;
+import geralt_encore.delightfulsqlbrite.todo.data.TodoItemModel;
 import geralt_encore.delightfulsqlbrite.todo.db.TodoItem;
 import rx.Observable;
-import rx.functions.Action1;
-import rx.functions.Func2;
 import rx.schedulers.Schedulers;
 import rx.subjects.PublishSubject;
 

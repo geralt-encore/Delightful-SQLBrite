@@ -19,8 +19,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.sqldelight.hockey.data.TodoItemModel;
-import com.example.sqldelight.hockey.data.TodoListModel;
+import geralt_encore.delightfulsqlbrite.todo.data.TodoItemModel;
+import geralt_encore.delightfulsqlbrite.todo.data.TodoListModel;
 
 final class DbOpenHelper extends SQLiteOpenHelper {
     private static final int VERSION = 1;

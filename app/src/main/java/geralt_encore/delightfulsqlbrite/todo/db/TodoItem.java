@@ -20,9 +20,9 @@ import com.google.auto.value.AutoValue;
 import android.database.Cursor;
 import android.os.Parcelable;
 
-import com.example.sqldelight.hockey.data.TodoItemModel;
 import com.squareup.sqldelight.RowMapper;
 
+import geralt_encore.delightfulsqlbrite.todo.data.TodoItemModel;
 import rx.functions.Func1;
 
 @AutoValue

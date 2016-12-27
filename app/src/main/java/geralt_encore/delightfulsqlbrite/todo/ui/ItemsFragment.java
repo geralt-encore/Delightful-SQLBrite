@@ -29,37 +29,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-import com.example.sqldelight.hockey.data.TodoItemModel;
-import com.jakewharton.rxbinding.widget.AdapterViewItemClickEvent;
 import com.jakewharton.rxbinding.widget.RxAdapterView;
 import com.squareup.sqlbrite.BriteDatabase;
-import com.squareup.sqlbrite.SqlBrite;
 import com.squareup.sqldelight.SqlDelightStatement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import geralt_encore.delightfulsqlbrite.R;
 import geralt_encore.delightfulsqlbrite.todo.TodoApp;
-import geralt_encore.delightfulsqlbrite.todo.db.Db;
+import geralt_encore.delightfulsqlbrite.todo.data.TodoItemModel;
 import geralt_encore.delightfulsqlbrite.todo.db.TodoItem;
 import geralt_encore.delightfulsqlbrite.todo.db.TodoList;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.functions.Func2;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 import static android.support.v4.view.MenuItemCompat.SHOW_AS_ACTION_IF_ROOM;
 import static android.support.v4.view.MenuItemCompat.SHOW_AS_ACTION_WITH_TEXT;
-import static com.squareup.sqlbrite.SqlBrite.Query;
 
 public final class ItemsFragment extends Fragment {
     private static final String KEY_LIST_ID = "list_id";

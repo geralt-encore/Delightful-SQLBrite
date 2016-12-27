@@ -20,9 +20,9 @@ import com.google.auto.value.AutoValue;
 import android.database.Cursor;
 import android.os.Parcelable;
 
-import com.example.sqldelight.hockey.data.TodoListModel;
 import com.squareup.sqldelight.RowMapper;
 
+import geralt_encore.delightfulsqlbrite.todo.data.TodoListModel;
 import rx.functions.Func1;
 
 // Note: normally I wouldn't prefix table classes but I didn't want 'List' to be overloaded.
