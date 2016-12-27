@@ -58,7 +58,7 @@ final class DbOpenHelper extends SQLiteOpenHelper {
         insertTodoItem.program.executeInsert();
         insertTodoItem.bind(holidayPresentsListId, "Pogs for Matt P.");
         insertTodoItem.program.executeInsert();
-        insertTodoItem.bind(holidayPresentsListId, "Coal for Jesse W.");
+        insertTodoItem.bind(holidayPresentsListId, "Cola for Jesse W.");
         insertTodoItem.program.executeInsert();
 
         insertTodoList.bind("Work Items");
