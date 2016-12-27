@@ -29,6 +29,7 @@ import rx.functions.Func1;
 @AutoValue
 public abstract class TodoList implements TodoListModel, Parcelable {
 
+    @SuppressWarnings("StaticInitializerReferencesSubClass")
     public static Factory<TodoList> FACTORY = new Factory<>(AutoValue_TodoList::new);
 
     public static RowMapper<String> NAME_MAPPER = FACTORY.select_name_by_idMapper();

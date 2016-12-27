@@ -28,17 +28,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnItemClick;
-
 import com.squareup.sqlbrite.BriteDatabase;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnItemClick;
 import geralt_encore.delightfulsqlbrite.R;
 import geralt_encore.delightfulsqlbrite.todo.TodoApp;
 import geralt_encore.delightfulsqlbrite.todo.db.TodoItem;

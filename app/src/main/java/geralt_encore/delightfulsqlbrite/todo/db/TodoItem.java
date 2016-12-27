@@ -28,6 +28,7 @@ import rx.functions.Func1;
 @AutoValue
 public abstract class TodoItem implements TodoItemModel, Parcelable {
 
+    @SuppressWarnings("StaticInitializerReferencesSubClass")
     public static final Factory<TodoItem> FACTORY = new Factory<>(AutoValue_TodoItem::new);
 
     public static final RowMapper<TodoItem> MAPPER = FACTORY.select_all_items_for_listMapper();

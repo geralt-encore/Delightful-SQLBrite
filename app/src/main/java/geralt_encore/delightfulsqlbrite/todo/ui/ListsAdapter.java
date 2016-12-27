@@ -25,7 +25,6 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
-import geralt_encore.delightfulsqlbrite.todo.db.TodoList;
 import geralt_encore.delightfulsqlbrite.todo.db.TodoList.ListsItem;
 import rx.functions.Action1;
 
