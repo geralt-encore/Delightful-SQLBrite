@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.squareup.sqldelight'
 apply plugin: 'me.tatarka.retrolambda'
 
@@ -38,17 +37,17 @@ dependencies {
 
     // Dagger dependencies.
     compile rootProject.ext.dagger
-    apt rootProject.ext.daggerCompiler
+    annotationProcessor rootProject.ext.daggerCompiler
 
     // Third-party dependencies.
     compile rootProject.ext.butterKnifeRuntime
-    apt rootProject.ext.butterKnifeCompiler
+    annotationProcessor rootProject.ext.butterKnifeCompiler
     compile rootProject.ext.timber
     compile rootProject.ext.rxJava
     compile rootProject.ext.rxAndroid
     compile rootProject.ext.rxBinding
 
     provided rootProject.ext.autoValue
-    apt rootProject.ext.autoValue
-    apt rootProject.ext.autoValueParcel
+    annotationProcessor rootProject.ext.autoValue
+    annotationProcessor rootProject.ext.autoValueParcel
 }
